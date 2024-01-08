@@ -1,5 +1,7 @@
-*{
+.texto{
     font-family: 'Georgia', 'Garamond', serif;
+    color: rgb(66, 22, 10);
+    /*color: rgb(110, 39, 19);*/
 }
 
 .fondo{
@@ -9,15 +11,20 @@
 
 .titulo{
     text-align: center;
-    color: rgb(66, 22, 10);
 }
 
 .titulo.principal{
     font-size: 42px;
+    background-color: rgb(253, 212, 136);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 .titulo.secundario{
     font-size: 24px;
+    margin-top: 5px;
 }
 
 #img_chef1{
@@ -26,6 +33,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 8px solid rgb(66, 22, 10);
+    border: 5px solid rgb(66, 22, 10);
     border-radius: 15%;
+    background-color: rgb(253, 212, 136);
+}
+
+.lista{
+    font-size: 18px;
+    margin-left: 25px;
 }
