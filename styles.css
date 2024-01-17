@@ -54,7 +54,6 @@
 .header .link{
     color:rgb(253, 212, 136);
     font-weight: bold;
-    text-decoration: none;
 }
 
 .cuerpo{
@@ -81,6 +80,10 @@
 .lista{
     list-style-type: square;
     padding-left: 15px;
+}
+
+.menu_izq .link{
+    color:rgb(253, 212, 136);
 }
 
 .contenido{
@@ -115,6 +118,11 @@
     margin: 0px;
 }
 
+.principal{
+    font-size: 36px;
+    margin: 0px;
+}
+
 .contenedor_titulos .secundario{
     font-size: 20px;
     margin: 0px;
@@ -124,6 +132,15 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(66, 22, 10);
+}
+
+.link:hover{
+    color: white;
 }
 
 li{
