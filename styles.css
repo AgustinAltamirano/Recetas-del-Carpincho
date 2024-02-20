@@ -47,7 +47,7 @@
   font-size: 40px;
 }
 
-@media (max-width: 650px){
+@media (max-width: 770px){
   .header{
     height: 80px;
     font-size: 18px;
@@ -62,6 +62,11 @@
   }
 }
 
+#abrir_menu_izq:hover{
+  color: white;
+  cursor: pointer;
+}
+
 .header .link{
   color:rgb(255, 228, 179);
 }
@@ -72,14 +77,15 @@
   flex: 1;
 }
 
+/* Las propiedades width y padding son modificadas en main.js*/
 .menu_izq{
   background-color: rgb(185, 77, 47);
   color: rgb(255, 228, 179);
-  width: 150px;
-  padding: 10px;
+  width: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  transition: 1s;
+  transition: .5s;
   overflow-x: hidden;
 }
 
@@ -105,6 +111,7 @@
 .lista{
   list-style-type: square;
   padding-left: 15px;
+  white-space: nowrap;
 }
 
 .menu_izq .link{
@@ -116,13 +123,15 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  transition: .5s;
+  overflow-x: hidden;
 }
 
 .contenido_inicio{
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   gap: 25px;
 }
 
@@ -153,6 +162,16 @@
   margin: 0px;
 }
 
+@media (max-width: 1000px){
+  .contenido_inicio{
+    justify-content: center;
+  }
+
+  .contenedor_titulos .secundario{
+    text-align: center;
+  }
+}
+
 .contenedor_ingredientes{
   display: flex;
   flex-wrap: wrap-reverse;
@@ -167,9 +186,10 @@
   border-radius: 10px;
 }
 
-@media (max-width: 550px){
+@media (max-width: 575px){
   .img_receta{
-    height: 120px;
+    width: 80vw;
+    height: auto;
   }
 }
 
