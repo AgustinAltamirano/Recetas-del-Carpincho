@@ -1,4 +1,3 @@
-const TITULO_PAGINA_PRINCIPAL = "Recetas del Carpincho";
 const ANCHO_MENU_IZQ_VIEWPORT_ANCHO = "170px";
 const ANCHO_MENU_IZQ_VIEWPORT_ANGOSTO = "100vw";
 const PADDING_MENU_IZQ = "10px";

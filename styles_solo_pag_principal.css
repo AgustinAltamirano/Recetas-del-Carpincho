@@ -1,3 +1,5 @@
+/* Este archivo es usado para que el menú lateral se encuentre abierto por
+  defecto solo en la página principal.*/
 @media (min-width: 575px){
   .menu_izq{
     width: 170px;
