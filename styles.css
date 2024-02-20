@@ -1,162 +1,207 @@
 .texto{
-    font-family: 'Georgia', 'Garamond', serif;
-    color: rgb(66, 22, 10);
-    font-size: 18px;
+  font-family: 'Georgia', 'Garamond', serif;
+  color: rgb(66, 22, 10);
+  font-size: 18px;
 }
 
 .fondo{
-    background-color: rgb(255, 214, 137);
-    margin: 0px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-color: rgb(255, 214, 137);
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    color: rgb(255, 228, 179);
-    background-color: rgb(138, 56, 34);
-    padding: 0px 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  color: rgb(255, 228, 179);
+  background-color: rgb(138, 56, 34);
+  padding: 0px 10px;
+  gap: 10px;
 }
 
 .header_izq, .header_der{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
 }
 
 #header_img_chef1, #contenido_img_chef1{
-    width: auto;
-    display: block;
-    border-radius: 15%;
-    background-color: rgb(255, 228, 179);
+  width: auto;
+  display: block;
+  border-radius: 15%;
+  background-color: rgb(255, 228, 179);
 }
 
 #header_img_chef1{
-    height: 80px;
-    border: 2px solid rgb(66, 22, 10);
+  height: 80px;
+  border: 2px solid rgb(66, 22, 10);
 }
 
 .header .titulo{
-    font-size: 40px;
+  font-size: 40px;
 }
 
-@media (max-width: 650px){
-    .header .titulo{
-        font-size: 28px;
-    }
+@media (max-width: 770px){
+  .header{
+    height: 80px;
+    font-size: 18px;
+  }
+
+  .header .titulo{
+    font-size: 20px;
+  }
+
+  #header_img_chef1{
+    height: 60px;
+  }
+}
+
+#abrir_menu_izq:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .header .link{
-    color:rgb(255, 228, 179);
-    font-weight: bold;
+  color:rgb(255, 228, 179);
 }
 
 .cuerpo{
-    display: flex;
-    align-items: stretch;
-    flex: 1;
+  display: flex;
+  align-items: stretch;
+  flex: 1;
 }
 
+/* Las propiedades width y padding son modificadas en main.js*/
 .menu_izq{
-    background-color: rgb(185, 77, 47);
-    color: rgb(255, 228, 179);
-    width: 150px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+  background-color: rgb(185, 77, 47);
+  color: rgb(255, 228, 179);
+  width: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  transition: .5s;
+  overflow-x: hidden;
 }
 
 .menu_titulo{
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cerrar_menu_izq{
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+#cerrar_menu_izq:hover{
+  color: white;
+  cursor: pointer;
 }
 
 .lista{
-    list-style-type: square;
-    padding-left: 15px;
+  list-style-type: square;
+  padding-left: 15px;
+  white-space: nowrap;
 }
 
 .menu_izq .link{
-    color:rgb(255, 228, 179);
+  color:rgb(255, 228, 179);
 }
 
 .contenido{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  transition: .5s;
+  overflow-x: hidden;
 }
 
 .contenido_inicio{
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-    gap: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 25px;
 }
 
 #contenido_img_chef1{
-    height: 200px;
-    border: 5px solid rgb(66, 22, 10);
+  height: 200px;
+  border: 5px solid rgb(66, 22, 10);
 }
 
 .contenedor_titulos{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contenedor_titulos .principal{
-    font-size: 40px;
-    text-align: center;
-    margin: 0px;
+  font-size: 40px;
+  text-align: center;
+  margin: 0px;
 }
 
 .principal{
-    font-size: 36px;
-    margin: 0px;
+  font-size: 36px;
+  margin: 0px;
 }
 
 .contenedor_titulos .secundario{
-    font-size: 20px;
-    margin: 0px;
+  font-size: 20px;
+  margin: 0px;
+}
+
+@media (max-width: 1000px){
+  .contenido_inicio{
+    justify-content: center;
+  }
+
+  .contenedor_titulos .secundario{
+    text-align: center;
+  }
 }
 
 .contenedor_ingredientes{
-    display: flex;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    column-gap: 100px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  column-gap: 100px;
 }
 
 .img_receta{
-    height: 250px;
-    width: auto;
-    border: 3px solid rgb(66, 22, 10);
-    border-radius: 10px;
+  height: 250px;
+  width: auto;
+  border: 3px solid rgb(66, 22, 10);
+  border-radius: 10px;
 }
 
-@media (max-width: 550px){
-    .img_receta{
-        height: 120px;
-    }
+@media (max-width: 575px){
+  .img_receta{
+    width: 80vw;
+    height: auto;
+  }
 }
 
 .link{
-    text-decoration: none;
-    color: rgb(66, 22, 10);
+  text-decoration: none;
+  color: rgb(66, 22, 10);
 }
 
 .link:hover{
-    color: white;
+  color: white;
 }
 
 li{
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
