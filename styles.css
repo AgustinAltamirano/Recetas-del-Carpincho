@@ -62,7 +62,7 @@
   }
 }
 
-#abrir_menu_izq:hover{
+.abrir_menu_izq:hover{
   color: white;
   cursor: pointer;
 }
