@@ -7,17 +7,19 @@ const ANCHO_MAXIMO_DE_VIEWPORT_ANGOSTO = 575;
 function main() {
   const menuIzq = document.querySelector(".menu_izq");
   const contenido = document.querySelector(".contenido");
-  const botonAbrirMenuIzq = document.querySelector("#abrir_menu_izq");
+  const botonesAbrirMenuIzq = document.querySelectorAll(".abrir_menu_izq");
   const botonCerrarMenuIzq = document.querySelector("#cerrar_menu_izq");
 
-  botonAbrirMenuIzq.addEventListener("click", () => {
-    if (window.innerWidth < ANCHO_MAXIMO_DE_VIEWPORT_ANGOSTO) {
-      menuIzq.style.width = ANCHO_MENU_IZQ_VIEWPORT_ANGOSTO;
-      contenido.style.padding = "0px";
-    } else {
-      menuIzq.style.width = ANCHO_MENU_IZQ_VIEWPORT_ANCHO;
-    }
-    menuIzq.style.padding = PADDING_MENU_IZQ;
+  botonesAbrirMenuIzq.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      if (window.innerWidth < ANCHO_MAXIMO_DE_VIEWPORT_ANGOSTO) {
+        menuIzq.style.width = ANCHO_MENU_IZQ_VIEWPORT_ANGOSTO;
+        contenido.style.padding = "0px";
+      } else {
+        menuIzq.style.width = ANCHO_MENU_IZQ_VIEWPORT_ANCHO;
+      }
+      menuIzq.style.padding = PADDING_MENU_IZQ;
+    })
   });
   botonCerrarMenuIzq.addEventListener("click", () => {
     contenido.style.padding = PADDING_CONTENIDO;
